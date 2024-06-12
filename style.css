@@ -1,80 +1,32 @@
-/* styles.css */
-
 :root {
-    --bg-gradient: radial-gradient(circle at 3.6751302083333335% 6.940104166666666%, #4D6001 0%, 11.55%, rgba(77,96,1,0) 35%), radial-gradient(circle at 92.96712239583333% 9.554036458333332%, #FAAA63 0%, 17.5%, rgba(250,170,99,0) 35%), radial-gradient(circle at 95.20670572916666% 90.48177083333333%, #C9C6FF 0%, 34.1%, rgba(201,198,255,0) 55%), radial-gradient(circle at 4.313151041666666% 93.34635416666667%, #97B49D 0%, 29.900000000000002%, rgba(151,180,157,0) 65%), radial-gradient(circle at 46.555989583333336% 11.50390625%, rgba(214,222,72,0.99) 0%, 25%, rgba(214,222,72,0) 50%), radial-gradient(circle at 51.121419270833336% 89.98697916666667%, #93C3FF 0%, 42%, rgba(147,195,255,0) 70%), radial-gradient(circle at 48.9013671875% 49.521484375%, #FFFFFF 0%, 100%, rgba(255,255,255,0) 100%);
     --bg-overlay-color: transparent;
-    --color_0: 80, 250, 254;
+    --bg-gradient: radial-gradient(circle at 3.7% 6.9%, #4D6001 0%, rgba(77,96,1,0) 35%),
+                    radial-gradient(circle at 93% 9.6%, #FAAA63 0%, rgba(250,170,99,0) 35%),
+                    radial-gradient(circle at 95.2% 90.5%, #C9C6FF 0%, rgba(201,198,255,0) 55%),
+                    radial-gradient(circle at 4.3% 93.3%, #97B49D 0%, rgba(151,180,157,0) 65%),
+                    radial-gradient(circle at 46.6% 11.5%, rgba(214,222,72,0.99) 0%, rgba(214,222,72,0) 50%),
+                    radial-gradient(circle at 51.1% 90%, #93C3FF 0%, rgba(147,195,255,0) 70%),
+                    radial-gradient(circle at 48.9% 49.5%, #FFFFFF 0%, rgba(255,255,255,0) 100%);
     --color_1: 255, 255, 255;
-    --color_2: 0, 0, 0;
-    --color_3: 255, 255, 255;
     --color_4: 255, 203, 5;
-    --color_5: 237, 28, 36;
-    --color_6: 0, 0, 0;
-    --color_7: 0, 0, 0;
-    --color_8: 255, 255, 255;
-    --color_9: 0, 145, 255;
-    --color_10: 255, 255, 255;
-    --color_11: 255, 255, 255;
     --color_12: 219, 219, 219;
-    --color_13: 179, 179, 179;
-    --color_14: 122, 122, 122;
-    --color_15: 51, 51, 51;
-    --color_16: 237, 191, 175;
-    --color_17: 235, 156, 129;
-    --color_18: 227, 129, 95;
-    --color_19: 117, 81, 68;
-    --color_20: 51, 41, 38;
-    --color_21: 197, 240, 231;
-    --color_22: 150, 219, 205;
-    --color_23: 113, 212, 192;
-    --color_24: 82, 112, 106;
-    --color_25: 41, 56, 53;
-    --color_26: 222, 232, 183;
-    --color_27: 208, 224, 148;
-    --color_28: 187, 209, 109;
-    --color_29: 112, 120, 87;
-    --color_30: 47, 49, 43;
-    --color_31: 213, 217, 237;
-    --color_32: 175, 182, 224;
-    --color_33: 145, 154, 199;
-    --color_34: 110, 119, 168;
-    --color_35: 37, 40, 56;
-    --font_0: normal normal normal 48px/1.4em trend-sans-w00-four, sans-serif;
+    --color_6: 0, 0, 0;
     --font_1: normal normal normal 15px/1.1em signika, sans-serif;
     --font_2: normal normal normal 30px/1.4em roboto-bold, roboto, sans-serif;
     --font_3: normal normal normal 24px/1.4em roboto-bold, roboto, sans-serif;
-    --font_4: normal normal normal 24px/1.4em roboto-bold, roboto, sans-serif;
-    --font_5: normal normal normal 24px/1.4em roboto-bold, roboto, sans-serif;
-    --font_6: normal normal normal 18px/1.4em roboto-bold, roboto, sans-serif;
-    --font_7: normal normal normal 18px/1.4em proxima-n-w01-reg, proxima-n-w05-reg, sans-serif;
-    --font_8: normal normal normal 16px/1.4em proxima-n-w01-reg, proxima-n-w05-reg, sans-serif;
-    --font_9: normal normal normal 14px/1.4em proxima-n-w01-reg, proxima-n-w05-reg, sans-serif;
-    --font_10: normal normal normal 12px/1.3em signika, sans-serif;
-    --scrollbar-width: 0px;
-}
-
-/* Basic Reset */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--bg-overlay-color);
-    background-image: var(--bg-gradient);
+    font-family: var(--font_1);
     font-size: 16px;
-    line-height: 1.5;
     margin: 0;
+    padding: 0;
+    background: var(--bg-gradient);
+    color: rgba(var(--color_6), 0.9);
 }
 
 header {
-    background: rgba(var(--color_6), 0.8);
-    color: rgba(var(--color_1), 0.9);
-    padding: 1rem 0;
+    background-color: rgba(var(--color_6), 0.8);
     position: fixed;
     top: 0;
     width: 100%;
@@ -86,6 +38,8 @@ nav ul {
     display: flex;
     justify-content: center;
     gap: 2rem;
+    margin: 0;
+    padding: 1rem 0;
 }
 
 nav a {
@@ -96,7 +50,7 @@ nav a {
 
 section {
     padding: 5rem 2rem;
-    margin-top: 80px; /* Adjust based on header height */
+    margin-top: 80px;
 }
 
 h1, h2 {
@@ -105,10 +59,6 @@ h1, h2 {
 
 h3 {
     font-family: var(--font_3);
-}
-
-p, a, button, input, textarea {
-    font-family: var(--font_1);
 }
 
 .project {
@@ -144,28 +94,4 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-.LWbAav {
-    background-color: var(--bg-overlay-color);
-    background-image: var(--bg-gradient);
-    transition: var(--inherit-transition);
-}
-
-.MW5IWV {
-    height: 100%;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    left: 0;
-    overflow: hidden;
-    -webkit-mask-image: var(--mask-image, none);
-    mask-image: var(--mask-image, none);
-    -webkit-mask-position: var(--mask-position, 0);
-    mask-position: var(--mask-position, 0);
-    -webkit-mask-repeat: var(--mask-repeat, no-repeat);
-    mask-repeat: var(--mask-repeat, no-repeat);
-    -webkit-mask-size: var(--mask-size, 100%);
-    mask-size: var(--mask-size, 100%);
-    pointer-events: var(--fill-layer-background-media-pointer-events);
 }
